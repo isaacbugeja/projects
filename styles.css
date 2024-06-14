@@ -1,0 +1,38 @@
+/*Style for Button*/
+button:hover{
+    cursor:pointer;
+    color:#fff;
+}
+
+button{
+    background-color:#888;
+    border:none;
+    border-radius:25px;
+    padding:5px;
+}
+
+/*General Formatting*/
+html{
+    box-sizing:border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+
+main{
+    text-align: center;
+    width:100%;
+    height:100%;
+    margin:50% auto
+}
+
+.output-container{
+    font-size:15px;
+    text-align:center;
+    margin:30px 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
