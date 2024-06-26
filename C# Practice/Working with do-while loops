@@ -1,0 +1,51 @@
+/* 
+        ===Working with ReadLine method for int values===
+
+int userInput;
+bool validInput = false;
+System.Console.WriteLine("Enter a number between 5 and 10");
+do
+{
+    string input = Console.ReadLine();
+    if (int.TryParse(input, out userInput))
+    {
+        if (userInput >= 5 && userInput <= 10)
+        {
+            validInput = true;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Enter a number between 5 and 10");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid input. Please enter a valid integer.");
+    }
+} while (!validInput);
+System.Console.WriteLine($"Input ({userInput}) has been accepted.");
+ */
+
+
+
+
+/* 
+        ===Working with ReadLine method for string values===
+
+using System;
+bool validInput = false;
+string? userInput = "";
+
+Console.WriteLine("Please enter one of the following three roles: 'Administrator'    'Manager'   'User'");
+
+while(validInput == false){
+    userInput = Console.ReadLine();
+    string modifiedUserInput = userInput.Trim().ToLower();
+    if(modifiedUserInput !="administrator".Trim().ToLower() && modifiedUserInput!="manager".Trim().ToLower() && modifiedUserInput != "user".Trim().ToLower()){
+        Console.WriteLine($"The role name that you entered '{userInput}' is not valid. Please enter a valid input:");
+    }
+    else{
+        Console.WriteLine($"Your input value ({userInput}) has been accepted.");
+        validInput = true;
+    }
+} */
