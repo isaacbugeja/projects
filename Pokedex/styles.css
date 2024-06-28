@@ -16,12 +16,12 @@ h1 {
     font-size: 60px;
     color: #FFCC00;
     text-shadow:
-    2px 2px 0 #3B4CCA,
-    -2px -2px 0 #3B4CCA,
-    2px -2px 0 #3B4CCA,
-    -2px 2px 0 #3B4CCA,
-    3px 3px 0 #3B4CCA,
-    -3px -3px 0 #3B4CCA;
+        2px 2px 0 #3B4CCA,
+        -2px -2px 0 #3B4CCA,
+        2px -2px 0 #3B4CCA,
+        -2px 2px 0 #3B4CCA,
+        3px 3px 0 #3B4CCA,
+        -3px -3px 0 #3B4CCA;
     letter-spacing: 6px;
     padding: 10px;
     text-align: center;
@@ -49,13 +49,14 @@ body {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Add spacing between elements */
+    gap: 10px;
+    /* Add spacing between elements */
     justify-content: center;
     align-items: center;
 }
 
-#search-container label{
-    margin:5px;
+#search-container label {
+    margin: 5px;
 }
 
 #search-container button {
@@ -67,7 +68,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     padding: 10px;
-    margin: 5px; 
+    margin: 5px;
 }
 
 #search-container input {
@@ -75,7 +76,7 @@ body {
     font-family: 'PokemonGb', Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px;
     max-width: 250px;
-    margin: 5px; 
+    margin: 5px;
 }
 
 #search-container button:hover {
@@ -83,7 +84,6 @@ body {
 }
 
 main {
-    background: linear-gradient(white, #b7b7b9);
     height: 100%;
     width: 100%;
 }
@@ -99,16 +99,16 @@ input {
 #pokemon-info {
     display: flex;
     justify-content: center;
-    width:100%;
+    width: 100%;
 }
 
-#pokemon-description{
+#pokemon-description {
     font-family: 'PokemonGb', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
 }
 
 /*  Pokemon stats table formatting  */
@@ -124,10 +124,11 @@ table {
     margin: 10px;
     border: 1px solid black;
     border-collapse: collapse;
-    width: auto; 
+    width: auto;
 }
 
-table th, table td {
+table th,
+table td {
     border: 1px solid black;
     padding: 8px;
     text-align: center;
@@ -135,18 +136,22 @@ table th, table td {
 
 
 table td {
-    font-weight: normal; /* Remove bold font from table data */
+    font-weight: normal;
+    /* Remove bold font from table data */
 }
+
 /* Sprite setting */
 .sprite {
     width: 130px;
-    height: 130px;   
+    height: 130px;
+    background-color:rgba(192,192,192,0.2);
+    border-radius:50%;
 }
 
-#pokemon-sprite{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+#pokemon-sprite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Set font for Pokemon info */
@@ -267,7 +272,7 @@ table td {
     position: fixed;
     bottom: 0;
     z-index: 1000;
-    text-align:center;
+    text-align: center;
     font-family: 'PokemonGb', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 8px;
 }
@@ -277,19 +282,34 @@ table td {
     padding: 5px;
 }
 
-#references a{
-    color:#c62828;
+#references a {
+    color: #c62828;
 }
 
-#references a:hover{
-    color:#e96666;
+#references a:hover {
+    color: #e96666;
 }
 
 /*  Mobile device friendly  */
 @media (max-width: 600px) {
     h1 {
-        font-size: 40px;
-        letter-spacing: 4px;
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height:100vh;
+    }
+    body, html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
     }
 
     #search-container {
@@ -300,12 +320,12 @@ table td {
     #search-container input,
     #search-container button {
         width: 100%;
-        max-width: none;
         font-size: 14px;
         padding: 8px;
     }
 
     #pokemon-info {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -338,9 +358,27 @@ table td {
     }
 
     .type {
-        width: auto;
         padding: 3px 5px;
         font-size: 0.6rem;
         margin: 2px;
+    }
+
+    #pokemon-stats {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
+
+    #references {
+        position: static; /* or adjust as needed */
+        margin-top: 10px; /* create space above it */
+        text-align: center;
+        font-size: 10px; /* adjust font size for readability */
+        z-index: 0;
     }
 }
