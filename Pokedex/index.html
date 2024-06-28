@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pokédex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <h1>Pokédex</h1>
+        <div id="search-container">
+            <label for="user-input">Search for a Pokemon:</label> <!--  TO CHANGE FONT TO FIND COMPATIBLE É-->
+            <input id="user-input" placeholder="Name or #ID" />
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="result-output">
+            <div id="pokemon-info">
+                <span id="pokemon-name"></span>
+                <span id="pokemon-number"></span>
+                <span id="pokemon-type"></span>
+            </div>
+            <div id="pokemon-sprite"></div>
+            <div id="pokemon-stats"></div>
+        </div>
+        <div id="references">
+            <p>This page was designed by <b><a href="https://isaacbugeja.com">Isaac Bugeja</a></b></p>
+            <p>Referenced with <a id="reference-link" href="https://pokeapi.co/docs/v2">PokeAPI</a> and ChatGPT</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
