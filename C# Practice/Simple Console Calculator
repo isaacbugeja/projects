@@ -1,0 +1,79 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        double num1; //Declaring variables
+        double num2;
+        double result;
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("Select an operation:");
+            Console.WriteLine("1. Addition");
+            Console.WriteLine("2. Subtraction");
+            Console.WriteLine("3. Multiplication");
+            Console.WriteLine("4. Division");
+            Console.WriteLine("5. Exit");
+
+            string input = Console.ReadLine();
+            if (input != null)
+            {
+                switch (input)
+                {
+                    case "1":
+                        Console.Write("Enter first number> ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.Write("Enter second number> ");
+                        num2 = double.Parse(Console.ReadLine());
+                        result = num1 + num2;
+                        Console.WriteLine($"The result is: {result}");
+                        Console.WriteLine("Press any key to continue...");
+                        Console.ReadKey();
+                        break;
+                    case "2":
+                        Console.Write("Enter first number> ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.Write("Enter second number> ");
+                        num2 = double.Parse(Console.ReadLine());
+                        result = num1 - num2;
+                        Console.WriteLine($"The result is: {result}");
+                        Console.WriteLine("Press any key to continue...");
+                        Console.ReadKey();
+                        break;
+                    case "3":
+                        Console.Write("Enter first number> ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.Write("Enter second number> ");
+                        num2 = double.Parse(Console.ReadLine());
+                        result = num1 * num2;
+                        Console.WriteLine($"The result is: {result}");
+                        Console.WriteLine("Press any key to continue...");
+                        Console.ReadKey();
+                        break;
+                    case "4":
+                        Console.Write("Enter first number> ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.Write("Enter second number> ");
+                        num2 = double.Parse(Console.ReadLine());
+                        result = num1 / num2;
+                        Console.WriteLine($"The result is: {result}");
+                        Console.WriteLine("Press any key to continue...");
+                        Console.ReadKey();
+                        break;
+                    case "5":
+                        Console.WriteLine("Exiting...");
+                        return;
+                    default:
+                        Console.WriteLine("Invalid input. Please try again.");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("No input provided");
+            }
+        }
+    }
+}
